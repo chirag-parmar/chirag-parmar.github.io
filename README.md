@@ -7,3 +7,5 @@
 * RoboCrop
 * Ahmet's Project
 * Walkity
+* Xtencion
+* Gallery
