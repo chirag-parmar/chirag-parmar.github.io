@@ -126,7 +126,19 @@ body {
   text-align: center;
 }
 .container {
-  margin-top: 24px;
+  padding-top: 24px;
+}
+#particles-js{
+  position: absolute;
+  width: 100%;
+  z-index:-1;
+}
+#intro_arrow_img{
+  height: 10%;
+  width: 10%;
+  float:left; 
+  margin-left: 3%; 
+  margin-top: 2%;
 }
 /* style for
 

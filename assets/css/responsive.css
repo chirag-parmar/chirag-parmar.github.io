@@ -17,6 +17,9 @@
   .sidebar .skill-line h3 {
     margin-bottom: 50px;
   }
+  #intro_arrow_img{
+    display: none;
+  }
   /* Section Style*/
   .section {
     padding: 0px !important;
@@ -46,6 +49,9 @@
 @media only screen and (max-width: 320px) {
   .container {
     width: 100% !important;
+  }
+  #intro_arrow_img{
+    display: none;
   }
   /* Sidebar Style*/
   .sidebar .nav-icon {
@@ -91,6 +97,9 @@
   .sidebar .icon {
     margin-bottom: 15px;
   }
+  #intro_arrow_img{
+    display: none;
+  }
   .sidebar .nav-icon {
     top: 0px;
   }
@@ -112,6 +121,9 @@
   }
   .container {
     width: 100% !important;
+  }
+  #intro_arrow_img{
+    display: none;
   }
   .sidebar .nav-icon {
     top: 130px;
@@ -152,6 +164,9 @@
   .container {
     width: 100% !important;
     margin-top: 0px !important;
+  }
+  #intro_arrow_img{
+    display: none;
   }
   .row {
     margin-left: -1.5rem !important;
@@ -272,5 +287,8 @@
   .skill-line span {
     text-align: left;
     display: block;
+  }
+  #intro_arrow_img{
+    display: none;
   }
 }
