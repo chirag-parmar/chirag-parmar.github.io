@@ -161,36 +161,6 @@ body {
 .sidebar .heading .feature-img img {
   width: 100%;
 }
-.sidebar .heading .button-collapse {
-  display: block !important;
-}
-.sidebar .heading .nav-icon {
-  position: absolute;
-  top: 0;
-  padding: 0 16px;
-}
-.sidebar .heading nav {
-  background-color: initial;
-  box-shadow: initial;
-}
-.sidebar .heading nav .button-collapse i {
-  height: 30px;
-  font-size: 18pt;
-  line-height: 24pt;
-  background-color: #5da4d9;
-  margin-top: 20px;
-  padding: 0px 6px;
-}
-.sidebar .heading nav .side-nav h3 {
-  color: #5da4d9;
-  padding: 0 15px;
-}
-.sidebar .heading nav .side-nav li a:hover {
-  color: #5da4d9;
-}
-.sidebar .heading nav .side-nav li:hover {
-  background-color: transparent !important;
-}
 .sidebar .heading .title {
   position: absolute;
   right: 11px;

@@ -13,6 +13,7 @@
   .sidebar .skill-line span {
     text-align: left;
     display: block;
+    padding-left: 10px;
   }
   .sidebar .skill-line h3 {
     margin-bottom: 50px;
@@ -30,8 +31,8 @@
   .section h4 {
     margin-bottom: 10px;
   }
-  .section .custom-content-wrapper p {
-    padding: 15px;
+  .section .custom-content-wrapper * {
+    padding: 10px 15px;
   }
   .section .section-wrapper h2 {
     margin-top: 10px;
@@ -44,6 +45,18 @@
     padding: 10px 15px;
     margin-right: initial;
   }
+  .post-title h2 {
+    padding: 10px 15px;
+    font-size: 14pt;
+    line-height: 24pt;
+  }
+  .post-title span {
+    padding: 10px 15px;
+    opacity: 0.7;
+  }
+  .post-large-details * {
+    padding: 10px 15px;
+  }
 }
 /* Smartphones (portrait) */
 @media only screen and (max-width: 320px) {
@@ -53,12 +66,8 @@
   #intro_arrow_img{
     display: none;
   }
-  /* Sidebar Style*/
-  .sidebar .nav-icon {
-    top: 0;
-  }
-  .sidebar .button-collapse {
-    margin-left: 0px;
+  .sidebar .progress{
+    padding:0px 35px;
   }
   .sidebar-item .info {
     margin-top: 20px;
@@ -66,6 +75,7 @@
   .skill-line span {
     text-align: left;
     display: block;
+    padding-left: 10px;
   }
   .skill-line h3 {
     margin-bottom: 50px;
@@ -80,8 +90,8 @@
     line-height: 24px;
     margin-bottom: 10px;
   }
-  .section .custom-content-wrapper p {
-    padding: 15px;
+  .section .custom-content-wrapper * {
+    padding: 10px 15px;
   }
   .interests {
     margin-top: 20px;
@@ -89,6 +99,18 @@
   }
   .interests ul li .fa {
     text-align: center;
+  }
+  .post-title h2 {
+    padding: 10px 15px;
+    font-size: 14pt;
+    line-height: 24pt;
+  }
+  .post-title span {
+    padding: 10px 15px;
+    opacity: 0.7;
+  }
+  .post-large-details * {
+    padding: 10px 15px;
   }
 }
 /* iPads (landscape) ----------- */
@@ -100,9 +122,6 @@
   #intro_arrow_img{
     display: none;
   }
-  .sidebar .nav-icon {
-    top: 0px;
-  }
   /* Sidebar Style*/
   .section {
     text-align: left;
@@ -112,6 +131,21 @@
   .section .education-details p {
     margin-top: 5px;
     padding-top: 0px;
+  }
+  .post-large-details * {
+    padding: 10px 15px;
+  }
+  .post-title h2 {
+    padding: 10px 15px;
+    font-size: 14pt;
+    line-height: 24pt;
+  }
+  .post-title span {
+    padding: 10px 15px;
+    opacity: 0.7;
+  }
+  .section .custom-content-wrapper * {
+    padding: 10px 15px;
   }
 }
 /* iPads (portrait) */
@@ -125,21 +159,16 @@
   #intro_arrow_img{
     display: none;
   }
-  .sidebar .nav-icon {
-    top: 130px;
-  }
   .sidebar .sidebar-item {
     overflow: hidden;
   }
   .sidebar .icon {
     margin: 30px 0;
   }
-  .sidebar .button-collapse {
-    margin-left: 6px;
-  }
   .sidebar .skill-line span {
     text-align: left;
     display: block;
+    padding-left: 10px;
   }
   .sidebar .skill-line h3 {
     margin-bottom: 20px;
@@ -150,13 +179,25 @@
     padding: 0px 22px;
     text-align: center;
   }
-  .section .custom-content-wrapper p {
+  .section .custom-content-wrapper * {
     margin-top: 5px;
     padding: 0px 20px;
   }
   .interests {
     margin-top: 20px;
     margin-bottom: 10px;
+  }
+  .post-title h2 {
+    padding: 10px 15px;
+    font-size: 14pt;
+    line-height: 24pt;
+  }
+  .post-title span {
+    padding: 10px 15px;
+    opacity: 0.7;
+  }
+  .post-large-details * {
+    padding: 10px 15px;
   }
 }
 /* tab portrait and down   */
@@ -172,10 +213,6 @@
     margin-left: -1.5rem !important;
     margin-right: -1.5rem !important;
     overflow-x: hidden !important;
-  }
-  /* Nav  Style*/
-  .button-collapse i {
-    margin-left: 20px;
   }
   /* Sidebar Style*/
   .sidebar {
@@ -201,6 +238,7 @@
   .sidebar .skill-line span {
     text-align: left;
     display: block;
+    padding-left: 10px;
   }
   /* Section Style*/
   .section {
@@ -218,8 +256,9 @@
   .section .custom-content-wrapper {
     padding: initial;
   }
-  .section .custom-content-wrapper p {
-    margin-top: 10px;
+  .section .custom-content-wrapper * {
+    margin: 0px 15px;
+    margin-bottom: 10px;
     padding: 0 20px;
   }
   .section .custom-content {
@@ -275,6 +314,18 @@
   .project-description {
     padding: 0 20px;
   }
+  .post-title h2 {
+    padding: 10px 15px;
+    font-size: 14pt;
+    line-height: 24pt;
+  }
+  .post-title span {
+    padding: 10px 15px;
+    opacity: 0.7;
+  }
+  .post-large-details * {
+    padding: 10px 15px;
+  }
 }
 /* iphone 6 (portrait and landscape)  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
@@ -287,8 +338,24 @@
   .skill-line span {
     text-align: left;
     display: block;
+    padding-left: 10px;
   }
   #intro_arrow_img{
     display: none;
+  }
+  .post-title h2 {
+    padding: 10px 15px;
+    font-size: 14pt;
+    line-height: 24pt;
+  }
+  .post-title span {
+    padding: 10px 15px;
+    opacity: 0.7;
+  }
+  .post-large-details * {
+    padding: 10px 15px;
+  }
+  .section .custom-content-wrapper * {
+    padding: 10px 15px;
   }
 }

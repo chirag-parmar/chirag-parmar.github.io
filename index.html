@@ -16,14 +16,14 @@
         <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-icon-76x76.html">
         <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
+        <!-- Compiled and minified JavaScript -->
+        
         <!-- ========================================
                 Stylesheets
         ==========================================--> 
-        
-        <!-- MATERIALIZE CORE CSS -->
-        <link href="assets/css/materialize.min.css" rel="stylesheet">
-        
 
         <!-- ADDITIONAL CSS -->
         <link rel="stylesheet" href="assets/css/animate.css">
@@ -32,6 +32,7 @@
         <!-- FONTS -->
         <link href='https://fonts.googleapis.com/cssf4f9.css?family=Roboto:400,100,300,700,400italic,700italic' rel='stylesheet' type='text/css'>
         
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <!--FONTAWESOME CSS-->
         <link href="assets/icons/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
@@ -43,9 +44,6 @@
 
         <!-- RESPONSIVE CSS-->
         <link href="assets/css/responsive.css" rel="stylesheet">
-
-
-        <link rel="stylesheet" href="assets/css/navbar.css">
         <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif] -->
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -60,10 +58,17 @@
             <div class = "container">
                 <!-- row -->
                 <div class="row">
-
-                <nav>
+                <script type="text/javascript">
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('.sidenav');
+                    var instances = M.Sidenav.init(elems, options);
+                  });
+                </script>
+                
+                <nav class="blue" style="padding: 0px 10px;">
                     <div class="nav-wrapper">
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
                             <li><a href="index.html">Resume</a></li>
                             <li><a href="project.html">Projects</a></li>
                             <li><a href="blog.html">Blog</a></li>
@@ -71,6 +76,14 @@
                         </ul>
                     </div>
                 </nav>
+
+                    <ul class="sidenav" id="mobile-nav">
+                        <li><a href="index.html">Resume</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+          
                 <br>
                 <!-- =========================================
                                SIDEBAR   
@@ -288,10 +301,9 @@
                 JavaScript
         ===================== -->
         <!-- Jquery core js-->
-        <script src="assets/js/jquery.min.js"></script>
-        
-        <!-- materialize js-->
-        <script src="assets/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         
         <!-- wow js-->
         <script src="assets/js/wow.min.js"></script>
