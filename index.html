@@ -44,17 +44,8 @@
         <!-- RESPONSIVE CSS-->
         <link href="assets/css/responsive.css" rel="stylesheet">
 
-        <!-- COLORS -->        
-        <link rel="alternate stylesheet" href="assets/css/colors/red.css" title="red">
-        <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple">
-        <link rel="alternate stylesheet" href="assets/css/colors/orange.css" title="orange">
-        <link rel="alternate stylesheet" href="assets/css/colors/green.css" title="green">
-        <link rel="stylesheet" href="assets/css/colors/lime.css" title="lime">
 
-        
-        <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
-        <link rel="stylesheet" href="assets/css/demo.css">
-        
+        <link rel="stylesheet" href="assets/css/navbar.css">
         <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif] -->
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -66,10 +57,21 @@
     <body>
         <!-- Start Container-->
         <div id="particles-js"></div>
-        <img src="assets/images/arrow.png" id="intro_arrow_img"/>
             <div class = "container">
                 <!-- row -->
                 <div class="row">
+
+                <nav>
+                    <div class="nav-wrapper">
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="index.html">Resume</a></li>
+                            <li><a href="project.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <br>
                 <!-- =========================================
                                SIDEBAR   
                 ==========================================-->
@@ -85,23 +87,7 @@
                                 <div class="feature-img">
                                     <a href="index-2.html"><img src="assets/images/profile-img.jpg" class="responsive-img" alt=""></a> 
                                 </div>                            
-                                <!-- =========================================
-                                           NAVIGATION   
-                                ==========================================-->
-                                <div class=" nav-icon">
-                                    <nav>
-                                        <div class="nav-wrapper">
-                                          <ul id="nav-mobile" class="side-nav">                                  
-                                            <li><a href="index-2.html">Resume</a></li>                                        
-                                            <li><a href="project.html">Projects</a></li>
-                                            <!--<li><a href="cover-latter.html">Cover Letter</a></li>-->
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                          </ul>
-                                          <a href="#" data-activates="nav-mobile" class="button-collapse  "><i class="mdi-navigation-menu"></i></a>
-                                        </div>
-                                    </nav>
-                                </div>                            
+                                                            
                                 <!-- ========================================
                                            NAME AND TAGLINE
                                 ==========================================-->
@@ -226,7 +212,7 @@
                                     <h2>Work Experience</h2>
                                     <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
                                         <h3>Student Researcher and IoT Head <span>@Next Tech Lab</span></h3>
-                                        <span> JAN 2016 - Present</span>
+                                        <span> JAN 2016 - MAY 2018</span>
                                         <p>Developed various projects in the field of IoT and Blockchains (Some of them are listed in the projects tab)
                                         I mentor over 25 students as the head of IoT domain. Most of my time at Next Tech is spent reading research papers
                                         and experimenting new technologies like blockchians and IoT.</p>
@@ -241,7 +227,7 @@
                                     </div>
                                     <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
                                         <h3>Industrial Trainee <span>@Chennai Metro Rail Limited(CMRL)</span></h3>
-                                        <span>JUN 2016 - 1/2 month </span>
+                                        <span>JUN 2016 - 1 month </span>
                                         <p>Analysed various sub-units of the metro car like driver display unit(DDU), train control monitoring system(TCMS) etc.
                                         Learnt about the various hardware level communication protocols used in the metro car like CAN bus, SPI, Serial-DB9 etc.</p>
                                     </div>

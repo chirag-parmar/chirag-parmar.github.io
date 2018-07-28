@@ -285,6 +285,14 @@ body {
   padding-left: 32px !important;
   text-align: left;
 }
+.bloggy-section {
+  padding-left: 2px !important;
+  text-align: left;
+}
+.projjy-section {
+  padding-left: 12px !important;
+  text-align: left;
+}
 .section .fa {
   text-align: center;
   display: block;
@@ -394,10 +402,10 @@ body {
   margin-bottom: -2px;
 }
 .blog-post:nth-child(odd) {
-  padding-left: 0px !important;
+  padding-left: 10px !important;
 }
 .blog-post:nth-child(even) {
-  padding-right: 0px !important;
+  padding-right: 10px !important;
 }
 .blog-post:last-child {
   padding-right: 0px !important;
@@ -417,9 +425,30 @@ body {
 #blog-post-5 {
   background-color: #68c02e;
 }
+#project-post {
+  background-color: #000000;
+}
 .post-details {
   background-color: #ffffff;
   padding: 20px 30px;
+  margin-bottom: 24px;
+}
+
+.post-large-details {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  margin-bottom: 24px;
+}
+
+.post-large-details p{
+  font-size: 14pt;
+  color: #000000;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+.projjy-post {
+  background-color: #ffffff;
+  padding: 0px;
   margin-bottom: 24px;
 }
 .featured-img {
