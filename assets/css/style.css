@@ -447,7 +447,57 @@ body {
   color: #000000;
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
+  word-wrap: break-word;
 }
+
+.post-large-details h1{
+  font-size: 36pt;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  word-break: break-all;
+}
+
+.post-large-details h2{
+  font-size: 30pt;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  word-break: break-all;
+}
+
+.post-large-details h3{
+  font-size: 24pt;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  word-break: break-all;
+}
+
+.post-large-details h4{
+  font-size: 20pt;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  word-break: break-all;
+}
+
+.post-large-details h5{
+  font-size: 18pt;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  word-break: break-all;
+}
+
+.post-large-details h6{
+  font-size: 16pt;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  word-break: break-all;
+}
+
 .projjy-post {
   background-color: #ffffff;
   padding: 0px;
