@@ -124,7 +124,6 @@ $(document).ready(function() {
     /**************************************************************************
        Projects
     **************************************************************************/
-    $('#portfolio-item').mixItUp();
     
     $('.sa-view-project-detail').on('click', function(event) {
         event.preventDefault();
@@ -135,7 +134,7 @@ $(document).ready(function() {
             preLoader     = $('#loader'),
             backBtn       = $('#back-button'),
             filterBtn     = $('#filter-button');
-
+        console.log(href)
         dataHide.animate( { 'marginLeft':'-120%' }, { duration: 400, queue: false } );
         filterBtn.animate( { 'marginLeft':'-120%' }, { duration: 400, queue: false } );
         dataHide.fadeOut(400);

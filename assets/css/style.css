@@ -433,7 +433,9 @@ body {
   padding: 20px 30px;
   margin-bottom: 24px;
 }
-
+.dynamic-post{
+  display:none;
+}
 .post-large-details {
   background-color: #ffffff;
   padding: 20px 30px;
