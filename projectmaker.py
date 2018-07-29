@@ -26,7 +26,11 @@ while (not fileCreated):
 		print "1. Paragraph"
 		print "2. Image"
 		print "3. Heading"
-		print "4. Content Finished"
+		print "4. GitHub Link"
+		print "5. Website Link"
+		print "6. Research Paper Link"
+		print "7. Youtube Video Link"
+		print "7. Content Finished"
 		content_type = input("Your choice: ")
 
 		if content_type == 1:
@@ -47,6 +51,18 @@ while (not fileCreated):
 			heading = raw_input("Enter the heading: ")
 			content += "<h" + str(heading_number) + ">" + heading + "</h" + str(heading_number) + ">" + "\n"
 		elif content_type == 4:
+			github_link = raw_input("Enter the GitHub link: ")
+			content += '<a href="' + github_link + '"><img src="../assets/social/github-social-logo.png" style="width:64px; height:64px; display:inline;padding:5px;"></a>'
+		elif content_type == 5:
+			website_link = raw_input("Enter the Website link: ")
+			content += '<a href="' + website_link + '"><img src="../assets/social/internet.png" style="width:64px; height:64px; display:inline;padding:5px;"></a>'
+		elif content_type == 6:
+			paper_link = raw_input("Enter the Research Paper link: ")
+			content += '<a href="' + paper_link + '"><img src="../assets/social/document.png" style="width:64px; height:64px; display:inline;padding:5px;"></a>'
+		elif content_type == 7:
+			youtube_link = raw_input("Enter the Youtube Link: ")
+			content += '<a href="' + youtube_link + '"><img src="../assets/social/youtube.png" style="width:64px; height:64px; display:inline;padding:5px;"></a>'
+		elif content_type == 8:
 			contentFinished = True
 		else:
 			continue
