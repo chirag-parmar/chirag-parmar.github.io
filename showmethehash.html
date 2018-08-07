@@ -169,9 +169,11 @@
 				innerDiv.append(revealed_title)
 			if(bids.length != 0){
 				for(var i=0; i<bids.length; i++){
-					var revealed = document.createElement('p')
-					revealed.append("ENS bid of " + (parseInt(bids[i]['bidAmount'])/1000000000000000000) + " Ether revealed by " + bids[i]['from'])
-					innerDiv.append(revealed);
+					if(checkUniquenessUnseal(bids[i], bids, i)){
+						var revealed = document.createElement('p')
+						revealed.append("ENS bid of " + (parseInt(bids[i]['bidAmount'])/1000000000000000000) + " Ether revealed by " + bids[i]['from'])
+						innerDiv.append(revealed);
+					}
 				}
 			}
 			else{
@@ -221,6 +223,20 @@
 			}
 
 			return (array[pos]['from'])
+		}
+
+		function checkUniquenessUnseal(unsealInfo, arrayInfo, n){
+			if(arrayInfo.length > 0){
+				for(var i=n+1; i<arrayInfo.length; i++){
+					if(unsealInfo['from'] == arrayInfo[i]["from"] && unsealInfo['bidAmount'] == arrayInfo[i]['bidAmount']){
+						return (false)
+					}
+				}
+				return (true)
+			}
+			else{
+				return (true)
+			}
 		}
 		
 	</script>
