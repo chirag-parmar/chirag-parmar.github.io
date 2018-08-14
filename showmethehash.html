@@ -1,10 +1,13 @@
+<!-- 	Author: Chirag Mahaveer Parmar 
+   		Website: https://www.chiragparmar.me
+   		GitHub: chirag-parmar
+   		LinkedIn: https://www.linkedin.com/in/chirag-parmar -->
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title>Show Me The Hash</title>
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
 	<style>
 		/* Style the search field */
 		body{
@@ -49,7 +52,7 @@
 		  font-size: 17px;
 		  border: none;
 		  float: left;
-		  width: 80%;
+		  width: 79%;
 		  color: white;
 		  background: #3a3a3a;
 		}
@@ -57,15 +60,27 @@
 		/* Style the submit button */
 		.searchField button {
 		  float: left;
-		  width: 20%;
+		  width: 10%;
 		  padding: 15px;
+		  margin-left: 0.5%;
 		  background: #ddd;
 		  font-size: 17px;
 		  border: none;
 		  cursor: pointer;
 		}
+		.searchField button:disabled{
+		  float: left;
+		  width: 10%;
+		  padding: 15px;
+		  margin-left: 0.5%;
+		  background: #707070;
+		  color: black;
+		  font-size: 17px;
+		  border: none;
+		  cursor: pointer;
+		}
 
-		.searchField button:hover {
+		.searchField button:hover:enabled {
 		  background: #bbb;
 		}
 
@@ -86,6 +101,7 @@
 		<center><div class='searchField'>
 			<input type="search" id="mySearch" placeholder="ENS Hash">
 			<button id= "search" type="button">Search</button>
+			<button id= "monitor" type="button">Monitor</button>
 		</div></center>
 		<br><br><br><br>
 		<div class ='results' id='results'>
@@ -93,10 +109,22 @@
 	</div>
 
 	<script>
+
+		monitor = document.getElementById('monitor')
+		monitor.disabled = true
+		monitor.onclick = function(){
+			searchbox = document.getElementById('mySearch')
+			postrequest(searchbox.value, function(res){
+				console.log("Monitoring")
+			}, '/monitor')
+		}
+
 		button = document.getElementById('search')
 		button.onclick = function(){
 			searchbox = document.getElementById('mySearch')
-			postrequest	(searchbox.value)
+			postrequest	(searchbox.value, loadDiv)
+			monitor = document.getElementById('monitor')
+			monitor.disabled = false
 		}
 
 		var createItem = function(ensData)	{
@@ -107,7 +135,7 @@
 			innerDiv.style.clear = 'both'
 			innerDiv.style.height = 'auto'
 			innerDiv.style.width = '97%'
-			innerDiv.style.fontFamily = "Montserrat,sans-serif"
+			innerDiv.style.fontFamily = "Righteous,cursive"
 			innerDiv.style.color = 'white'
 			innerDiv.style.borderRadius= '25px';
 
@@ -169,11 +197,9 @@
 				innerDiv.append(revealed_title)
 			if(bids.length != 0){
 				for(var i=0; i<bids.length; i++){
-					if(checkUniquenessUnseal(bids[i], bids, i)){
-						var revealed = document.createElement('p')
-						revealed.append("ENS bid of " + (parseInt(bids[i]['bidAmount'])/1000000000000000000) + " Ether revealed by " + bids[i]['from'])
-						innerDiv.append(revealed);
-					}
+					var revealed = document.createElement('p')
+					revealed.append("ENS bid of " + (parseInt(bids[i]['bidAmount'])/1000000000000000000) + " Ether revealed by " + bids[i]['from'])
+					innerDiv.append(revealed);
 				}
 			}
 			else{
@@ -185,29 +211,33 @@
 			return innerDiv
 		}
 
-		var postrequest = function(hash){
+		var loadDiv = function(res) {//Call a function when the state changes.
+	    	ensData = JSON.parse(res)
+	    	item = createItem(ensData)
+	    	results = document.getElementById('results')
+			while (results.hasChildNodes()) {
+			    results.removeChild(results.lastChild);
+			}
+	    	results.append(item)
+		}
+
+		var postrequest = function(hash, onLoadFunc, extension = '/'){
 			var http = new XMLHttpRequest();
-			var url = "https://showmethehash.herokuapp.com/";
+			var url = "http://showmethehash.herokuapp.com" + extension;
 			var params = '{"hash":"' + hash + '"}';
 			http.open('POST', url);
 
 			//Send the proper header information along with the request
 			http.setRequestHeader('Content-Type', 'application/json');
 
-			http.onload = function() {//Call a function when the state changes.
-			    if(http.readyState==4 && http.status == 200) {
-			    	ensData = JSON.parse(http.responseText)
-			    	item = createItem(ensData)
-			    	results = document.getElementById('results')
-					while (results.hasChildNodes()) {
-					    results.removeChild(results.lastChild);
-					}
-			    	results.append(item)
-			    }
-			    else{
-			    	console.log(http.status)
-			    }
-			}
+			http.onload = function(){
+				if(http.readyState == 4 && http.status == 200){
+					onLoadFunc(http.responseText)
+				}
+				else{
+					console.log(http.status)
+				}
+			} 
 
 			http.send(params)
 		}
@@ -223,20 +253,6 @@
 			}
 
 			return (array[pos]['from'])
-		}
-
-		function checkUniquenessUnseal(unsealInfo, arrayInfo, n){
-			if(arrayInfo.length > 0){
-				for(var i=n+1; i<arrayInfo.length; i++){
-					if(unsealInfo['from'] == arrayInfo[i]["from"] && unsealInfo['bidAmount'] == arrayInfo[i]['bidAmount']){
-						return (false)
-					}
-				}
-				return (true)
-			}
-			else{
-				return (true)
-			}
 		}
 		
 	</script>
