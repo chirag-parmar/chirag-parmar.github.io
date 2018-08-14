@@ -223,7 +223,7 @@
 
 		var postrequest = function(hash, onLoadFunc, extension = '/'){
 			var http = new XMLHttpRequest();
-			var url = "http://showmethehash.herokuapp.com" + extension;
+			var url = "https://showmethehash.herokuapp.com" + extension;
 			var params = '{"hash":"' + hash + '"}';
 			http.open('POST', url);
 
