@@ -37,19 +37,36 @@ $(document).ready(function() {
              BLOG POST 
     **************************************************************************/
 
-    $(".id").imagesLoaded(function(){
-        $('.blog').masonry({
-          itemSelector: '.blog-post',
-          columnWidth: '.blog-post',
-          percentPosition: true
-        });
-        
-        $('.gallery').masonry({
-          itemSelector: '.gallery-item',
-          columnWidth: '.gallery-item',
-          percentPosition: true
-        });
+    var $masonry = $('.gallery-section');
+    $masonry.masonry({
+        itemSelector: '.gallery-item',
+        columnWidth: '.gallery-item',
+        percentPosition: true
     });
+    $masonry.imagesLoaded(function() {
+        $masonry.masonry('layout');
+    });
+
+    var $masonry2 = $('.bloggy-section');
+    $masonry2.masonry({
+        itemSelector: '.blog-post',
+        columnWidth: '.blog-post',
+        percentPosition: true
+    });
+    $masonry2.imagesLoaded(function() {
+        $masonry2.masonry('layout');
+    });
+
+    var $masonry3 = $('.projjy-section');
+    $masonry3.masonry({
+        itemSelector: '.blog-post',
+        columnWidth: '.blog-post',
+        percentPosition: true
+    });
+    $masonry3.imagesLoaded(function() {
+        $masonry3.masonry('layout');
+    });
+
 
     var height = $('.caption').height();
         if($(window).width()){

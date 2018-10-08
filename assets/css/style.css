@@ -263,7 +263,11 @@ body {
   text-align: left;
 }
 .projjy-section {
-  padding-left: 12px !important;
+  padding-left: 2px !important;
+  text-align: left;
+}
+.gallery-section {
+  padding-left: 2px !important;
   text-align: left;
 }
 .section .fa {
